@@ -1,7 +1,10 @@
 [build]
-  command = "npx vite build"
+  command = "npm run build"
   publish = "dist"
   functions = "netlify/functions"
+
+[build.environment]
+  NPM_CONFIG_PRODUCTION = "false"
 
 [[redirects]]
   from = "/api/*"
